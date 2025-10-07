@@ -1,0 +1,21 @@
+chore(init): инициализация репозитория, базовые файлы и каркас проекта
+
+Подготовлен воспроизводимый скелет проекта и базовая инфраструктура разработки:
+— Настроен Poetry (Python 3.12) и зафиксирован lock-файл.
+— Подключены pre-commit хуки (end-of-file, trailing-whitespace, check-yaml, nbstripout) и Ruff (линтер + форматтер).
+— Добавлены основные и dev-зависимости; настроен src-layout для пакета telco_churn.
+— Созданы каркас исходников, минимальные тесты и демо-UI на Streamlit.
+— Добавлены Makefile-цели для установки, линтинга, форматирования, тестов и запуска демо-приложения.
+
+Изменённые/добавленные файлы:
+• README.md — добавлен краткий «быстрый старт», структура проекта и ссылка на лицензию.
+• LICENSE — добавлена лицензия MIT (не забудь позже заменить YEAR и FULL NAME).
+• .gitignore — базовые исключения: .venv, .env*, __pycache__/, data/ (с .gitkeep), отчёты/кэши IDE и ОС.
+• .pre-commit-config.yaml — добавлены pre-commit-hooks (end-of-file-fixer, trailing-whitespace, check-yaml), nbstripout для .ipynb и ruff/ruff-format.
+• pyproject.toml — настроен Poetry-проект (packages = [{ include = "telco_churn", from = "src" }]); добавлены зависимости (pandas, numpy, scikit-learn, matplotlib, joblib, streamlit) и dev-зависимости (ruff, pytest, pre-commit, ipykernel); включены базовые правила Ruff.
+• poetry.lock — сгенерирован lock-файл для воспроизводимости окружения.
+• Makefile — добавлены цели: setup, lint, format, test, app, data, clean.
+• src/telco_churn/__init__.py — пустой файл-заглушка для инициализации пакета.
+• src/telco_churn/example.py — пустой файл-заглушка для инициализации пакета.
+• tests/test_smoke.py — пустой файл-заглушка для инициализации пакета.
+• app/main.py — пустой файл-заглушка для инициализации пакета.

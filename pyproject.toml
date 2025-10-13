@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "telco-churn-notes"
+version = "0.1.0"
+description = "Reproducible ML/NLP/LLM pipeline for telco churn with notes"
+authors = ["Egor Gridnev"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.0"
+numpy = "^1.26.0"
+scikit-learn = "^1.5.0"
+matplotlib = "^3.8.0"
+joblib = "^1.4.0"
+streamlit = "^1.35.0"
+PyYAML = "^6.0.3"
+pyarrow = "^21.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.0"
+pytest = "^8.0.0"
+pre-commit = "^3.7.0"
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+lint.select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["telco_churn"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

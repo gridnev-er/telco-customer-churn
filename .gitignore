@@ -1,0 +1,26 @@
+# ОС и IDE
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.env
+.env.*
+
+# Данные и промежуточные артефакты
+data/clean/
+data/features/
+data/row/
+!data/.gitkeep
+reports/monitoring/
+
+# Ноутбуки
+.ipynb_checkpoints/
+
+# Poetry
+poetry.toml

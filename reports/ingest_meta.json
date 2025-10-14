@@ -1,0 +1,15 @@
+{
+    "dataset_name": "telco",
+    "saved_path": "data/raw/telco.csv",
+    "saved_at": "2025-10-14T08:38:16.447893+00:00",
+    "md5": "64d04a4a2142a9e049b76bc2ed17a70d",
+    "file_size_bytes": 2823246,
+    "n_rows": 10000,
+    "n_cols": 28,
+    "source_version": "synthetic v0.1 (2025-10-14)",
+    "reader_params": {"engine": "pandas.read_csv","encoding": "utf-8","sep": ","},
+    "run_id": "d8df3d40-665c-4440-b995-cdec52ea24e9",
+    "git_commit": null,
+    "schema_version": "0.1",
+    "history": []
+}

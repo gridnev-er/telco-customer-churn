@@ -1,0 +1,8 @@
+dataset: telco
+source_version: "2025-10-14"
+timezon: UTC
+reader_params:
+  encoding: utf-8
+  delimetr: ","
+  header: true
+  na_values: ["", "NA", "N/A"]

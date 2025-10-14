@@ -1,0 +1,4 @@
+raw_dir: data/raw
+clean_dir: data/clean
+reporst_dir: reporst
+raw_filename: telco.csv

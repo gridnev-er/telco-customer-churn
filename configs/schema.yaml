@@ -1,0 +1,90 @@
+schema_version: 1
+columns:
+  - name: customerID
+    type: string
+    nullable: false
+  - name: Churn
+    type: category
+    nullable: false
+  - name: notes
+    type: string
+    nullable: true
+    max_len: 4000
+  - name: SeniorCitizen
+    type: int
+    nullable: false
+  - name: Partner
+    type: category
+    nullable: false
+  - name: Dependents
+    type: category
+    nullable: false
+  - name: gender
+    type: category
+    nullable: false
+  - name: tenure
+    type: int
+    nullable: false
+  - name: PhoneService
+    type: category
+    nullable: false
+  - name: MultipleLines
+    type: category
+    nullable: false
+  - name: InternetService
+    type: category
+    nullable: false
+  - name: OnlineSecurity
+    type: category
+    nullable: false
+  - name: OnlineBackup
+    type: category
+    nullable: false
+  - name: DeviceProtection
+    type: category
+    nullable: false
+  - name: TechSupport
+    type: category
+    nullable: false
+  - name: StreamingTV
+    type: category
+    nullable: false
+  - name: StreamingMovies
+    type: category
+    nullable: false
+  - name: Contract
+    type: category
+    nullable: false
+  - name: PaperlessBilling
+    type: category
+    nullable: false
+  - name: PaymentMethod
+    type: category
+    nullable: false
+  - name: MonthlyCharges
+    type: float
+    nullable: false
+  - name: TotalCharges
+    type: float
+    nullable: true
+  - name: SupportRequestsLast90d
+    type: int
+    nullable: false
+  - name: ComplaintFlag
+    type: category
+    nullable: false
+  - name: DaysSinceLastLogin
+    type: int
+    nullable: false
+  - name: Region
+    type: category
+    nullable: false
+  - name: SignupDate
+    type: datetime
+    nullable: false
+  - name: LastInteraction
+    type: datetime
+    nullable: false
+notes_policy:
+  pii_redaction: off_in_data_layer
+  comment: "Храним сырой текст; PII-маскировка выполняется в LLM-сервисе"

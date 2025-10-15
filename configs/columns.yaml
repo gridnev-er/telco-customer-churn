@@ -1,0 +1,24 @@
+id_cols: [customerID]
+label_col: Churn
+text_cols: [notes]
+date_cols: [SignupDate, LastInteraction]
+num_cols: [SeniorCitizen, tenure, MonthlyCharges, TotalCharges, SupportRequestsLast90d, DaysSinceLastLogin]
+cat_cols:
+  - gender
+  - Partner
+  - Dependents
+  - PhoneService
+  - MultipleLines
+  - InternetService
+  - OnlineSecurity
+  - OnlineBackup
+  - DeviceProtection
+  - TechSupport
+  - StreamingTV
+  - StreamingMovies
+  - Contract
+  - PaperlessBilling
+  - PaymentMethod
+  - ComplaintFlag
+  - Region
+tech_cols: []

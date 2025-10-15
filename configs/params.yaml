@@ -1,8 +1,40 @@
-dataset: telco
-source_version: "2025-10-14"
-timezon: UTC
+dataset_name: telco
+random_state: 42
+timezone: UTC
+
 reader_params:
   encoding: utf-8
-  delimetr: ","
+  delimiter: ","
   header: true
   na_values: ["", "NA", "N/A"]
+
+soft_checks:
+  notes_max_len: 4000
+  max_cast_fail_rate: 0.02
+  max_missing_rate_notice: 0.4
+
+casting:
+  numeric_thousand_sep_policy: homogeneous
+  decimal_sep: "."
+  datetime:
+    default_tz: UTC
+    formats: ["%Y-%m-%d", "%d/%m/%Y"]
+
+booleans:
+  mappings:
+    PaperlessBilling: {"Yes": true, "No": false}
+
+categories:
+  canonical_cases:
+    gender: {"male": "Male", "female": "Female"}
+
+label_validation:
+  column: Churn
+  allowed_values: ["Yes", "No"]
+  positive_class: "Yes"
+  fail_on_invalid: true
+  sample_invalid_limit: 5
+
+guards:
+  fail_if_non_feature_in_X: true
+  warn_if_text_not_string: true

@@ -51,3 +51,7 @@ notes_profiling:
     phone: "(?<!\\d)(?:\\+?\\d[\\d .()-]{7,}\\d)(?!\\d)"
     long_number: "(?<!\\d)\\d{7,}(?!\\d)"
     url: "https?://[^\\s]+"
+
+sanity:
+  label_share_atol: 1e-6
+  missing_share_atol: 1e-6

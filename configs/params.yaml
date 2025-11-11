@@ -52,6 +52,25 @@ notes_profiling:
     long_number: "(?<!\\d)\\d{7,}(?!\\d)"
     url: "https?://[^\\s]+"
 
+leakage:
+  keyword_patterns:
+    - "(?i)churn"
+    - "(?i)cancel"
+    - "(?i)terminated"
+    - "(?i)disconnect"
+    - "(?i)closed"
+    - "(?i)status"
+    - "(?i)state"
+    - "(?i)(_at|_ts)$"
+
+  near_perfect:
+    auc_threshold: 0.98
+    min_support: 20
+
+  temporal:
+    future_year_max: 2035
+    check_order_pairs:
+      - ["SignupDate", "LastInteraction"]
 sanity:
   label_share_atol: 1e-6
   missing_share_atol: 1e-6
